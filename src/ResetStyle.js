@@ -6,6 +6,7 @@ const ResetStyle = createGlobalStyle`
   *,
   * & {
     box-sizing: border-box;
+    user-select: none;
   }
   html {
     font-size: 10px;

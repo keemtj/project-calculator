@@ -1,8 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Circle = ({ r, top, bottom, left, right }) => {
-  return <StCircle r={r} top={top} bottom={bottom} left={left} right={right} />;
+const Circle = ({ r, top, bottom, left, right, children }) => {
+  return (
+    <StCircle r={r} top={top} bottom={bottom} left={left} right={right}>
+      {children}
+    </StCircle>
+  );
 };
 
 const StCircle = styled.div`
