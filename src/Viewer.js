@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Viewer = ({ result }) => {
-  return <StViewer>{result}</StViewer>;
+const Viewer = ({ state }) => {
+  return <StViewer>{state.value}</StViewer>;
 };
 
 const StViewer = styled.div`

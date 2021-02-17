@@ -6,39 +6,51 @@ import { TiEquals } from 'react-icons/ti';
 import { HiOutlineSwitchVertical } from 'react-icons/hi';
 import { BsDot } from 'react-icons/bs';
 
-const Keypad = () => {
+const Keypad = ({ state, dispatch }) => {
   const onClickNumber = ({ target }) => {
     console.dir(target.innerText);
+    dispatch({ type: 'Input', number: target.innerText });
   };
 
   const onTogglePlusMinus = () => {
     console.log('add + or -');
+    dispatch({ type: 'Toggle' });
   };
   const onAdd = () => {
     console.log('Add!');
+    dispatch({ type: 'Add' });
   };
   const onSubtract = () => {
     console.log('Subtract');
+    dispatch({ type: 'Subtract' });
   };
   const onDivide = () => {
     console.log('Divide!');
+    dispatch({ type: 'Divide' });
   };
   const onMultiply = () => {
     console.log('Multiply');
+    dispatch({ type: 'Multiply' });
   };
   const onPercent = () => {
     console.log('Divide num by 100!');
+    dispatch({ type: 'Percent' });
   };
   const onAddDot = () => {
     console.log('Add Dot(.)');
+    dispatch({ type: 'Dot' });
   };
   const onResult = () => {
     console.log('Finish!');
+    dispatch({ type: 'Result' });
+  };
+  const onClear = () => {
+    state.isCalculate ? console.log('clear!') : console.log('All clear!');
   };
 
   return (
     <StKeypad>
-      <StKey>AC</StKey>
+      <StKey onClick={onClear}>AC</StKey>
       <StKey onClick={onTogglePlusMinus}>
         <HiOutlineSwitchVertical />
       </StKey>
