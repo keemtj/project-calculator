@@ -7,42 +7,71 @@ import { HiOutlineSwitchVertical } from 'react-icons/hi';
 import { BsDot } from 'react-icons/bs';
 
 const Keypad = () => {
+  const onClickNumber = ({ target }) => {
+    console.dir(target.innerText);
+  };
+
+  const onTogglePlusMinus = () => {
+    console.log('add + or -');
+  };
+  const onAdd = () => {
+    console.log('Add!');
+  };
+  const onSubtract = () => {
+    console.log('Subtract');
+  };
+  const onDivide = () => {
+    console.log('Divide!');
+  };
+  const onMultiply = () => {
+    console.log('Multiply');
+  };
+  const onPercent = () => {
+    console.log('Divide num by 100!');
+  };
+  const onAddDot = () => {
+    console.log('Add Dot(.)');
+  };
+  const onResult = () => {
+    console.log('Finish!');
+  };
+
   return (
     <StKeypad>
-      <StKey>C</StKey>
-      <StKey>
+      <StKey>AC</StKey>
+      <StKey onClick={onTogglePlusMinus}>
         <HiOutlineSwitchVertical />
       </StKey>
-      <StKey>
+      <StKey onClick={onPercent}>
         <FiPercent />
       </StKey>
-      <StKey>
+      <StKey onClick={onDivide}>
         <FiDivide />
       </StKey>
-      <StKey>7</StKey>
-      <StKey>8</StKey>
-      <StKey>9</StKey>
-      <StKey>
+      <StKey onClick={onClickNumber}>7</StKey>
+      <StKey onClick={onClickNumber}>8</StKey>
+      <StKey onClick={onClickNumber}>9</StKey>
+      <StKey onClick={onMultiply}>
         <MdClear />
       </StKey>
-      <StKey>4</StKey>
-      <StKey>5</StKey>
-      <StKey>6</StKey>
-      <StKey>
+      <StKey onClick={onClickNumber}>4</StKey>
+      <StKey onClick={onClickNumber}>5</StKey>
+      <StKey onClick={onClickNumber}>6</StKey>
+      <StKey onClick={onSubtract}>
         <FiMinus />
       </StKey>
-      <StKey>1</StKey>
-      <StKey>2</StKey>
-      <StKey>3</StKey>
-      <StKey>
+      <StKey onClick={onClickNumber}>1</StKey>
+      <StKey onClick={onClickNumber}>2</StKey>
+      <StKey onClick={onClickNumber}>3</StKey>
+      <StKey onClick={onAdd}>
         <FiPlus />
       </StKey>
-      <StKey>0</StKey>
-      <StKey>,000</StKey>
-      <StKey>
+      <StKey onClick={onClickNumber}>0</StKey>
+      <StKey onClick={onClickNumber}>000</StKey>
+      <StKey onClick={onAddDot}>
         <BsDot />
       </StKey>
-      <StKey>
+      <StKey onClick={onResult}>
         <TiEquals />
       </StKey>
     </StKeypad>

@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Keypad from './Keypad';
 import Viewer from './Viewer';
 
+// 1. 연산하기 전 숫자를 만들어주는 함수
+// 2. 연산중인 함수
+// 3. 연산이 완료되면 setResult 업데이트
 const Calculator = () => {
+  // result state
+  const [result, setResult] = useState(0);
+
   return (
     <Glass>
-      <Viewer />
-      <Keypad />
+      <Viewer result={result} />
+      <Keypad setResult={setResult} />
     </Glass>
   );
 };
