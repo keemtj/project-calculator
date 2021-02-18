@@ -19,11 +19,14 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'Input':
       return {
+        ...state,
         value:
+          state.value === 0 ? '' + action.number : state.value + action.number,
+        save:
           state.value === 0 ? '' + action.number : state.value + action.number,
       };
     case 'Add':
-      return { value: state.value, save: state.value };
+      return { value: state.value + 1 };
     case 'Subtract':
       return { value: state.value - 1 };
     case 'Divide':
