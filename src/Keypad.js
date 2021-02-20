@@ -6,84 +6,43 @@ import { TiEquals } from 'react-icons/ti';
 import { HiOutlineSwitchVertical } from 'react-icons/hi';
 import { BsDot } from 'react-icons/bs';
 
-const Keypad = ({ state, dispatch }) => {
-  const onClickNumber = ({ target }) => {
-    console.dir(target.innerText);
-    dispatch({ type: 'Input', number: target.innerText });
-  };
-
-  const onTogglePlusMinus = () => {
-    console.log('add + or -');
-    dispatch({ type: 'Toggle' });
-  };
-  const onAdd = () => {
-    console.log('Add!');
-    dispatch({ type: 'Add' });
-  };
-  const onSubtract = () => {
-    console.log('Subtract');
-    dispatch({ type: 'Subtract' });
-  };
-  const onDivide = () => {
-    console.log('Divide!');
-    dispatch({ type: 'Divide' });
-  };
-  const onMultiply = () => {
-    console.log('Multiply');
-    dispatch({ type: 'Multiply' });
-  };
-  const onPercent = () => {
-    console.log('Divide num by 100!');
-    dispatch({ type: 'Percent' });
-  };
-  const onAddDot = () => {
-    console.log('Add Dot(.)');
-    dispatch({ type: 'Dot' });
-  };
-  const onResult = () => {
-    console.log('Finish!');
-    dispatch({ type: 'Result' });
-  };
-  const onClear = () => {
-    state.isCalculate ? console.log('clear!') : console.log('All clear!');
-  };
-
+const Keypad = () => {
   return (
     <StKeypad>
-      <StKey onClick={onClear}>AC</StKey>
-      <StKey onClick={onTogglePlusMinus}>
+      <StKey>{'C'}</StKey>
+      <StKey>
         <HiOutlineSwitchVertical />
       </StKey>
-      <StKey onClick={onPercent}>
+      <StKey>
         <FiPercent />
       </StKey>
-      <StKey onClick={onDivide}>
+      <StKey>
         <FiDivide />
       </StKey>
-      <StKey onClick={onClickNumber}>7</StKey>
-      <StKey onClick={onClickNumber}>8</StKey>
-      <StKey onClick={onClickNumber}>9</StKey>
-      <StKey onClick={onMultiply}>
+      <StKey>7</StKey>
+      <StKey>8</StKey>
+      <StKey>9</StKey>
+      <StKey>
         <MdClear />
       </StKey>
-      <StKey onClick={onClickNumber}>4</StKey>
-      <StKey onClick={onClickNumber}>5</StKey>
-      <StKey onClick={onClickNumber}>6</StKey>
-      <StKey onClick={onSubtract}>
+      <StKey>4</StKey>
+      <StKey>5</StKey>
+      <StKey>6</StKey>
+      <StKey>
         <FiMinus />
       </StKey>
-      <StKey onClick={onClickNumber}>1</StKey>
-      <StKey onClick={onClickNumber}>2</StKey>
-      <StKey onClick={onClickNumber}>3</StKey>
-      <StKey onClick={onAdd}>
+      <StKey>1</StKey>
+      <StKey>2</StKey>
+      <StKey>3</StKey>
+      <StKey>
         <FiPlus />
       </StKey>
-      <StKey onClick={onClickNumber}>0</StKey>
-      <StKey onClick={onClickNumber}>000</StKey>
-      <StKey onClick={onAddDot}>
+      <StKey>0</StKey>
+      <StKey>000</StKey>
+      <StKey>
         <BsDot />
       </StKey>
-      <StKey onClick={onResult}>
+      <StKey>
         <TiEquals />
       </StKey>
     </StKeypad>
@@ -101,7 +60,6 @@ const StKeypad = styled.div`
 `;
 
 const StKey = styled.button`
-  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: center;
