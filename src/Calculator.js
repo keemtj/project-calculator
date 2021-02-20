@@ -56,21 +56,21 @@ const reducer = (state, action) => {
         ...state,
         number: 0,
         operator: action.operator,
-        expression: state.result + action.operator,
+        expression: state.expression + state.result + action.operator,
       };
     case 'Multiply':
       return {
         ...state,
         number: 0,
         operator: action.operator,
-        expression: state.result + action.operator,
+        expression: state.expression + state.result + action.operator,
       };
     case 'Divide':
       return {
         ...state,
         number: 0,
         operator: action.operator,
-        expression: state.result + action.operator,
+        expression: state.expression + state.result + action.operator,
       };
     case 'Clear':
       return {
@@ -83,6 +83,7 @@ const reducer = (state, action) => {
         ...state,
         number: 0,
         result: eval(state.expression + state.number),
+        operator: '',
         expression: '',
       };
     default:

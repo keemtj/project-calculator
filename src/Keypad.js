@@ -8,7 +8,6 @@ import { BsDot } from 'react-icons/bs';
 
 const Keypad = ({ state, dispatch }) => {
   const onClickNumber = ({ target }) => {
-    console.log(target.name);
     dispatch({ type: 'Number', number: target.name });
   };
   const onDot = () => {
