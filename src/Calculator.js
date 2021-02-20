@@ -93,7 +93,7 @@ const reducer = (state, action) => {
 
 const Calculator = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state);
+
   return (
     <Glass>
       <Viewer state={state} />
