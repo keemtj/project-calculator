@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Viewer = () => {
-  return <StViewer>0</StViewer>;
+const Viewer = ({ state }) => {
+  return <StViewer>{Number(state.result).toLocaleString()}</StViewer>;
 };
 
 const StViewer = styled.div`
