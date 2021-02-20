@@ -107,8 +107,7 @@ const Glass = styled.section`
   flex-flow: column nowrap;
   align-items: center;
   justify-content: flex-start;
-  width: 40vw;
-  min-width: 55rem;
+  width: 55rem;
   height: auto;
   background: linear-gradient(
     to right bottom,

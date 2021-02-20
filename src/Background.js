@@ -9,8 +9,8 @@ const Background = () => {
       <StBackground>
         <Calculator />
       </StBackground>
-      <Circle r={20} top={5} right={20} />
-      <Circle r={20} bottom={5} left={20} />
+      <Circle r={20} top={5} right={25} />
+      <Circle r={25} bottom={5} left={25} />
     </>
   );
 };
