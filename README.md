@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# 📝 Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="1679" alt="리액트 계산기" src="https://user-images.githubusercontent.com/51189962/108585385-ab81f000-738b-11eb-8138-dd4e08b5971f.png">
+리액트(React)로 구현한 Calculator입니다. iOS의 계산기를 참고하여 최신 Trends UI중 Glass morphism UI를 참고하여 구현하였습니다. 프로젝트의 주요 목적은 Glass Morphism 디자인 적용하기 입니다.
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+## 💄 UI Design
 
-### `yarn start`
+- [UI Design Trends 2021](https://www.youtube.com/watch?v=5RluSnRPRbI) Youtube 채널의 Glass morphism UI를 참고하여 작업
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🧑🏻‍💻 Feature
 
-### `yarn test`
+### 주요 기능
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 숫자패드(0~9, 000) 및 연산자(+, -, /, \*)에 맞는 연산 구현
+- +/-(음수), % 연산 구현
+- 자릿수에 맞게 콤마(,) 출력 구현(ex. 24,000, 15,123,)
+- 소수점(.) 연산 구현(ex. 1,234.56)
+- 입력된 숫자에 대한 clear 기능(C) 구현
 
-### `yarn build`
+### 2차 목표
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Dark mode일때 Glass Morphism UI 구현하기
+- eval() 메소드 없이 연산기능 구현하기
+  > [MDN - eval()](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)에 따르면 eval에 대한 주의 문구가 나온다.
+- 모든 기록을 삭제하는 AC(All clear)기능 추가하기
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  <br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠 Techs
 
-### `yarn eject`
+![React](https://img.shields.io/badge/React-53C1DE?style=flat-square&logo=react&logoColor=white)![Styled-Components](https://img.shields.io/badge/Styled_Components-DB7C85?style=flat-square&logo=styled-components&logoColor=white)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br/>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ↩️ Commit History
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[내 커밋 히스토리 보러가기](https://github.com/keemtj/project-calculator/commits/master)
